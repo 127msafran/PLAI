@@ -15,8 +15,8 @@
   }
   
 .transition-gradient {
-  height: 100px; /* Height of the gradient */
-  background: linear-gradient(180deg, #000000, #222222); /* Gradient from header to main */
+  height: 100px;
+  background: linear-gradient(180deg, #000000, #222222);
 }
   
 .title-bg {
@@ -100,14 +100,14 @@ h2 {
 }
 
 .custom-card-bg {
-  background-image: url(https://t4.ftcdn.net/jpg/01/28/98/53/360_F_128985367_mNdX0b56w6OcgiyUDnZwukpK1bkpfWwI.jpg); /* Bootstrap dark grey */
-  color: white; /* Ensure text is readable */
+  background-image: url(https://t4.ftcdn.net/jpg/01/28/98/53/360_F_128985367_mNdX0b56w6OcgiyUDnZwukpK1bkpfWwI.jpg);
+  color: white;
 }
 
 #taskContainer {
   display: flex;
-  flex-direction: column; /* Stack items vertically */
-  gap: 10px; /* Add spacing between cards */
+  flex-direction: column;
+  gap: 10px;
 }
 
 .draggable-card {
@@ -115,8 +115,8 @@ h2 {
 }
 
 .dragging {
-  opacity: 0.7; /* Slightly transparent while dragging */
-  cursor: grabbing; /* Change cursor to grabbing */
+  opacity: 0.7;
+  cursor: grabbing;
 }
 
 .custom-color {

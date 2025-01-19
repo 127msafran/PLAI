@@ -72,15 +72,15 @@
         </div>
 
         <script>
-            let taskCount = 0; // Counter to keep track of the task numbers
+            let taskCount = 0;
             
             document.getElementById('addTaskButton').addEventListener('click', function () {
                 const taskInput = document.getElementById('taskInput');
                 const taskText = taskInput.value.trim();
                 if (taskText) {
-                    taskCount++; // Increment task counter
+                    taskCount++;
                     createTaskCard(taskText, taskCount);
-                    taskInput.value = ''; // Clear input field
+                    taskInput.value = '';
                 }
             });
 
@@ -117,21 +117,20 @@
 
             if (checkbox.checked) {
                 taskText.classList.add('strikethrough');
-                // Add a delay before removing the card
+                
                 setTimeout(() => {
-                taskCard.style.transition = "opacity 0.5s ease-out"; // Fade out effect
-                taskCard.style.opacity = 0; // Start fading out
+                taskCard.style.transition = "opacity 0.5s ease-out";
+                taskCard.style.opacity = 0;
                 setTimeout(() => {
-                    taskCard.remove(); // Remove the card after fade out
-                    reorderTaskNumbers(); // Reorder task numbers after removal
-                }, 500); // Ensure the card is removed after fade-out completes (500ms)
-                }, 2000); // Delay of 2 seconds before starting fade-out
+                    taskCard.remove();
+                    reorderTaskNumbers();
+                }, 500);
+                }, 2000);
             } else {
                 taskText.classList.remove('strikethrough');
             }
             }
 
-            // Function to add drag-and-drop event listeners to each card
             function addDragAndDropListeners(card) {
             card.addEventListener('dragstart', (e) => {
                 e.target.classList.add('dragging');
@@ -139,12 +138,12 @@
 
             card.addEventListener('dragend', (e) => {
                 e.target.classList.remove('dragging');
-                reorderTaskNumbers(); // Reorder task numbers after dragging
+                reorderTaskNumbers();
             });
 
             const taskContainer = document.getElementById('taskContainer');
             taskContainer.addEventListener('dragover', (e) => {
-                e.preventDefault(); // Allow the drop
+                e.preventDefault();
                 const afterElement = getDragAfterElement(taskContainer, e.clientY);
                 const dragging = document.querySelector('.dragging');
                 if (afterElement == null) {
@@ -155,7 +154,6 @@
             });
             }
 
-            // Function to find the closest element where the dragged element should be placed
             function getDragAfterElement(container, y) {
             const draggableElements = [...container.querySelectorAll('.draggable-card:not(.dragging)')];
 
@@ -170,12 +168,11 @@
             }, { offset: Number.NEGATIVE_INFINITY }).element;
             }
 
-            // Reorder task numbers based on their new position in the container
             function reorderTaskNumbers() {
             const taskCards = document.querySelectorAll('.draggable-card');
             taskCards.forEach((card, index) => {
                 const badge = card.querySelector('.badge');
-                badge.textContent = index + 1; // Update badge with the new order
+                badge.textContent = index + 1;
             });
             }
         </script>
