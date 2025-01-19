@@ -14,78 +14,131 @@
     padding-top: 60px
   }
   
-  .transition-gradient {
-    height: 100px; /* Height of the gradient */
-    background: linear-gradient(180deg, #000000, #222222); /* Gradient from header to main */
+.transition-gradient {
+  height: 100px; /* Height of the gradient */
+  background: linear-gradient(180deg, #000000, #222222); /* Gradient from header to main */
+}
+  
+.title-bg {
+  background-color: #000000;
+}
+  
+@keyframes anim {
+  from {
+    background-position: 0% 200%;
   }
   
-  .title-bg {
-    background-color: #000000;
+  to {
+    background-position: 0% 0%;
   }
+}
   
-  @keyframes anim {
-    from {
-      background-position: 0% 200%;
-    }
-  
-    to {
-      background-position: 0% 0%;
-    }
-  }
-  
-  body {
-    background-color: #222222;
+body {
+  background-color: #222222;
     
-  }
+}
   
-  main {
-    font-family: "Montserrat", serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-    color:whitesmoke;
-    margin-left: 20px;
-    margin-right:20px
-  }
+main {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  color:whitesmoke;
+  margin-left: 20px;
+  margin-right:20px
+}
   
-  header p {
-    text-align: center;
-    font-size: 20px;
-    margin: 0px;
-    font-family: "Montserrat", serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-    color:whitesmoke;
-    padding-bottom: 20px;
-  }
+header p {
+  text-align: center;
+  font-size: 20px;
+  margin: 0px;
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  color:whitesmoke;
+  padding-bottom: 20px;
+}
   
-  header a {
-    position:absolute;
-    top:20px;
-    left:20px;
-    color:whitesmoke;
-  }
+header a {
+  position:absolute;
+  top:20px;
+  left:20px;
+  color:whitesmoke;
+}
   
-  a.link-1:hover {
-    color:white;
-  }
+a.link-1:hover {
+  color:white;
+}
   
-  .red {
-    color:#FF6666;
-    font-weight: 750;
-  }
+.red {
+  color:#FF6666;
+  font-weight: 750;
+}
   
-  .blue {
-    color:#6699FF;
-    font-weight: 750;
-  }
+.blue {
+  color:#6699FF;
+  font-weight: 750;
+}
   
-  .aqua {
-    color:#66ffff;
-    font-weight: 750;
-  }
+.aqua {
+  color:#66ffff;
+  font-weight: 750;
+}
   
-  img {
-    border-radius: 100%;
-  }
+img {
+  border-radius: 100%;
+}
+
+h2 {
+  text-align:center;
+  padding-bottom: 30px;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+}
+
+.custom-card-bg {
+  background-image: url(https://t4.ftcdn.net/jpg/01/28/98/53/360_F_128985367_mNdX0b56w6OcgiyUDnZwukpK1bkpfWwI.jpg); /* Bootstrap dark grey */
+  color: white; /* Ensure text is readable */
+}
+
+#taskContainer {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  gap: 10px; /* Add spacing between cards */
+}
+
+.draggable-card {
+  transition: transform 0.1s ease;
+}
+
+.dragging {
+  opacity: 0.7; /* Slightly transparent while dragging */
+  cursor: grabbing; /* Change cursor to grabbing */
+}
+
+.custom-color {
+  background-color: #000000;
+}
+
+.custom-color-2 {
+  background-color: #222222;
+}
+
+h3 {
+  padding-top: 30px;
+  padding-left: 40px;
+}
+
+li {
+  margin-left: 50px;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+hr {
+  margin: 20px;
+}
